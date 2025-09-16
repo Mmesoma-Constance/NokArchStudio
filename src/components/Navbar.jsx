@@ -1,5 +1,6 @@
 import { ChevronDown, Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
@@ -15,9 +16,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-light tracking-tight text-foreground">
+            <Link to="/" className="text-2xl font-light tracking-tight text-black">
               NokArchStudio
-            </h1>
+            </Link>
           </div>
 
           {/* Navigation Links */}

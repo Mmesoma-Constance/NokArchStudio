@@ -106,12 +106,16 @@
 
 @layer base {
   body {
+  
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
       "Roboto", sans-serif;
   }
 }
 
 @layer components {
+.bg-background {
+
+}
   /* Navigation Styles */
   .nav-link {
     @apply text-sm font-medium tracking-wide uppercase transition-colors duration-200;
