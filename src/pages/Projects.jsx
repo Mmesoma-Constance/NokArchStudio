@@ -200,7 +200,9 @@ const categories = [
 const Projects = () => {
   const { slug } = useParams();
   const [activeCategory, setActiveCategory] = useState('all');
-  const [lightboxIndex, setLightboxIndex] = useState(null)
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
+    const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
   window.scrollTo(0, 0); // scrolls to very top
@@ -359,7 +361,6 @@ const Projects = () => {
 
   // Show projects grid listing
   
-    const [visibleCount, setVisibleCount] = useState(6);
 
 const filteredProjects = activeCategory === 'all' 
   ? allProjects 
@@ -395,8 +396,8 @@ const visibleProjects = filteredProjects.slice(0, visibleCount);
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-6 py-3 transition-colors ${
                     activeCategory === category.id
-                      ? 'bg-black text-white'
-                      : 'bg-black/5 text-black hover:text-white hover:bg-black/80'
+                      ? 'bg-[#1f5c89] text-white'
+                      : 'bg-black/5 text-black hover:text-white hover:bg-[#1f5c89aa]'
                   }`}
                 >
                   {category.label}
@@ -438,7 +439,7 @@ const visibleProjects = filteredProjects.slice(0, visibleCount);
   <div className="text-center mt-12">
     <button 
       onClick={() => setVisibleCount(prev => prev + 6)}
-      className="px-6 py-3 bg-black text-white hover:bg-black/80"
+      className="px-6 py-3 bg-[#1f5c89] text-white hover:bg-[#1f5c89dd]"
     >
       Load More
     </button>

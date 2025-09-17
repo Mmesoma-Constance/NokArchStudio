@@ -37,7 +37,7 @@ const Navigation = () => {
                 <Link 
                   to={item.href} 
                   className={`nav-link ${
-                    location.pathname === item.href ? 'text-blue-600 font-medium' : 'text-gray-800'
+                    location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                   }`}
                 >
                   {item.label}

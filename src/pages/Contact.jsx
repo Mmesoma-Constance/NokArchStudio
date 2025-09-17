@@ -128,7 +128,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-black text-white hover:bg-black/90  py-4  transition-colors font-medium"
+                    className="w-full bg-[#1f5c89] text-white hover:bg-[#1f5c89dd]  py-4  transition-colors font-medium"
                   >
                     Send Message
                   </button>
@@ -207,7 +207,7 @@ const Contact = () => {
               Prefer to speak directly? Book a consultation call to discuss your project requirements 
               and timeline with our team.
             </p>
-            <button className="inline-flex items-center px-8 py-4 bg-black text-white hover:bg-black/90 transition-colors">
+            <button className="inline-flex items-center px-8 py-4 bg-[#1f5c89] text-white hover:bg-[#1f5c89dd] transition-colors">
               Book Consultation Call
             </button>
           </div>

@@ -156,7 +156,7 @@ const Services = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-black/95 text-white">
+        <section className="py-20 bg-[#1f5c89] text-white">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-5xl font-light mb-8">
               Ready to Start Your Project?
