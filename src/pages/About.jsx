@@ -1,6 +1,6 @@
 import Navigation from './../components/Navbar';
 import Footer from './../components/Footer';
-import { Users, Target, Award } from 'lucide-react';
+import { Users, Lightbulb, Award, Leaf, ZoomIn, UserCheck } from 'lucide-react';
 import project1 from "./../assets/images/project (1).jpg";
 import team1 from "./../assets/images/team (1).jpg";
 import team2 from "./../assets/images/team (2).jpg";
@@ -35,6 +35,40 @@ const About = () => {
     }
   ];
 
+  // why choose us
+  const items = [
+    {
+      title: "Innovative Design",
+      icon: Lightbulb,
+      description: "Over 15 years of experience in sustainable architecture and urban planning."
+    },
+    {
+      title: "Client-Centered Approach", 
+      icon: UserCheck,
+     description: "Specializes in residential and commercial interior design with a modern aesthetic."
+    },
+    {
+      title: "Sustainable Solutions",
+      icon: Leaf,
+       description: "Ensures seamless project execution from concept to completion."
+    },
+    {
+      title: "Attention to Detail",
+      icon: ZoomIn,
+      description: "Creates harmonious outdoor spaces that complement architectural designs."
+    },
+ {
+      title: "Expert Team",
+      icon: Users,
+       description: "Ensures seamless project execution from concept to completion."
+    },
+    {
+      title: "Proven Track Record",
+      icon: Award,
+      description: "Creates harmonious outdoor spaces that complement architectural designs."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background w-full">
       <Navigation />
@@ -44,9 +78,7 @@ const About = () => {
         <section className="max-w-8xl mx-auto px-6 w-full py-20 bg-gradient-to-r from-primary/5 to-accent/5">
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="text-center space-y-8">
-              <h1 className="text-4xl md:text-6xl font-light text-hero-text">
-                About NokArchStudio Studio
-              </h1>
+             
               <p className="text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 We are a creative architectural studio dedicated to crafting spaces that inspire, 
                 function beautifully, and stand the test of time.
@@ -94,7 +126,7 @@ const About = () => {
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-light text-foreground mb-6">
-                What We Do
+                Why Choose Us?
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Our expertise spans multiple disciplines, ensuring comprehensive architectural solutions.
@@ -102,70 +134,19 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Target className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">Architectural Design</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  From concept to completion, we create innovative architectural solutions that balance 
-                  form, function, and sustainability.
+              {items.map((item, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-medium text-foreground mb-4">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                 {item.description}
                 </p>
-              </div>
+                </div>
+              ))}
 
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Award className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">Interior Design</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Thoughtful interior spaces that enhance user experience while reflecting 
-                  contemporary African aesthetics.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">Urban Planning</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Strategic urban design that creates vibrant, sustainable communities 
-                  for future generations.
-                </p>
-              </div>
-            <div className="text-center group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Target className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">Architectural Design</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  From concept to completion, we create innovative architectural solutions that balance 
-                  form, function, and sustainability.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Award className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">Interior Design</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Thoughtful interior spaces that enhance user experience while reflecting 
-                  contemporary African aesthetics.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">Urban Planning</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Strategic urban design that creates vibrant, sustainable communities 
-                  for future generations.
-                </p>
-              </div>
+            
             </div>
           </div>
         </section>

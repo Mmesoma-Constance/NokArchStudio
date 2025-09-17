@@ -93,10 +93,8 @@ const Services = () => {
         <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center space-y-8">
-              <h1 className="text-4xl md:text-6xl font-light text-hero-text">
-                Our Services
-              </h1>
-              <p className="text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
+             
+              <p className="font-sourcesans text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 Comprehensive architectural services tailored to bring your vision to life, 
                 from initial concept to final construction.
               </p>
@@ -133,12 +131,12 @@ const Services = () => {
                         </ul>
                       </div>
 
-                      <div className="pt-6">
+                      {/* <div className="pt-6">
                         <button className="inline-flex items-center px-6 py-3 bg-black text-white hover:bg-black/90 transition-colors">
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   

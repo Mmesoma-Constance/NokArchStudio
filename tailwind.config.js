@@ -2,7 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+        sourcesans: ["Source Sans Pro", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        lora: ["Lora", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

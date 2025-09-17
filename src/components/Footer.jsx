@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <h3 className="text-xl font-light tracking-tight text-foreground mb-4">
-              NokArchStudio Studio
+              NokArchStudio
             </h3>
             <p className="text-muted-foreground max-w-md">
               Creating exceptional architectural experiences that blend innovation with timeless design principles. 

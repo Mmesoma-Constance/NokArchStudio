@@ -12,9 +12,7 @@ const Contact = () => {
         <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center space-y-8">
-              <h1 className="text-4xl md:text-6xl font-light text-hero-text">
-                Contact Us
-              </h1>
+             
               <p className="text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 Ready to start your next architectural project? We'd love to hear from you. 
                 Let's discuss how we can bring your vision to life.
