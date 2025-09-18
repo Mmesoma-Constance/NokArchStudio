@@ -189,7 +189,7 @@
 
   /* Image Transitions */
   .hero-image {
-    @apply w-full h-full object-cover;
+    @apply w-full h-full bg-cover bg-no-repeat bg-center overflow-hidden;
     transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
       transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
@@ -239,3 +239,4 @@
 @import "@fontsource/montserrat/600.css";
 @import "@fontsource/montserrat/700.css";
 
+@import "@fontsource/inconsolata/600.css";

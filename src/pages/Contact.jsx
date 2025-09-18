@@ -13,7 +13,7 @@ const Contact = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center space-y-8">
              
-              <p className="text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
+              <p className="font-inconsolata uppercase text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 Ready to start your next architectural project? We'd love to hear from you. 
                 Let's discuss how we can bring your vision to life.
               </p>
@@ -22,16 +22,16 @@ const Contact = () => {
         </section>
 
         {/* Contact Content */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
               {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-light text-foreground mb-8">
-                  Get In Touch
+                 Schedule a Consultation
                 </h2>
-                <form className="space-y-6">
+                <form className="space-y-6 font-inconsolata">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
@@ -141,16 +141,16 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 
-                <div className="space-y-8">
+                <div className="space-y-8 font-inconsolata">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <MapPin className="w-6 h-6 text-primary" />
+                      <MapPin className="w-6 h-6 text-primary text-[#1f5c89]" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-2">Office Address</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        123 Victoria Island,<br />
-                        Lagos State, Nigeria<br />
+                        123 Zik Avenue, Aroma Junction<br />
+                        Awka State, Nigeria<br />
                         100001
                       </p>
                     </div>
@@ -158,18 +158,18 @@ const Contact = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <Phone className="w-6 h-6 text-primary" />
+                      <Phone className="w-6 h-6 text-primary text-[#1f5c89]" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-2">Phone</h3>
-                      <p className="text-muted-foreground">+234 (0) 123 456 789</p>
-                      <p className="text-muted-foreground">+234 (0) 987 654 321</p>
+                      <p className="text-muted-foreground">+2345 123 456 789</p>
+                      <p className="text-muted-foreground">+2347 987 654 321</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <Mail className="w-6 h-6 text-primary" />
+                      <Mail className="w-6 h-6 text-primary text-[#1f5c89]" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-2">Email</h3>
@@ -180,7 +180,7 @@ const Contact = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <Clock className="w-6 h-6 text-primary" />
+                      <Clock className="w-6 h-6 text-primary text-[#1f5c89]" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-2">Office Hours</h3>
@@ -198,7 +198,7 @@ const Contact = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-muted/30">
+        {/* <section className="py-20 bg-muted/30">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6">
               Schedule a Consultation
@@ -211,7 +211,7 @@ const Contact = () => {
               Book Consultation Call
             </button>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer />

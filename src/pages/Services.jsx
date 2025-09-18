@@ -1,6 +1,7 @@
 import Navigation from './../components/Navbar';
 import Footer from './../components/Footer';
 import { ArrowRight } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import project1 from "./../assets/images/project (5).jpg";
 import project2 from "./../assets/images/project (10).jpg";
 import project3 from "./../assets/images/project (6).jpg";
@@ -94,7 +95,7 @@ const Services = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center space-y-8">
              
-              <p className="font-sourcesans text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
+              <p className="font-inconsolata uppercase text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 Comprehensive architectural services tailored to bring your vision to life, 
                 from initial concept to final construction.
               </p>
@@ -103,11 +104,11 @@ const Services = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-20">
             <div className="space-y-20">
               {services.map((service, index) => (
-                <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
+                <div key={index}  data-aos="fade-up" className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
                   index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}>
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
@@ -115,16 +116,16 @@ const Services = () => {
                       <h2 className="text-3xl md:text-4xl font-light text-foreground">
                         {service.title}
                       </h2>
-                      <p className="text-lg text-muted-foreground leading-relaxed">
+                      <p className="font-inconsolata text-lg text-muted-foreground leading-relaxed ">
                         {service.description}
                       </p>
                       
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-medium text-foreground">What's Included:</h3>
+                      <div className="space-y-4 font-inconsolata">
+                        <h3 className="text-lg font-medium text-foreground text-[#1f5c89]">What's Included:</h3>
                         <ul className="space-y-3">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-muted-foreground">
-                              <ArrowRight className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
+                              <ArrowRight className="w-4 h-4 text-primary mr-3 flex-shrink-0 text-[#1f5c89]" />
                               {feature}
                             </li>
                           ))}
@@ -161,16 +162,16 @@ const Services = () => {
             <h2 className="text-3xl md:text-5xl font-light mb-8">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl opacity-90 mb-12 leading-relaxed">
+            <p className="font-inconsolata text-xl opacity-90 mb-12 leading-relaxed">
               Let's discuss how we can bring your architectural vision to life. 
               Contact us today for a consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center font-inconsolata">
               <button className="px-8 py-4 bg-white text-black  hover:bg-white/90 transition-colors">
-                Schedule Consultation
+              <Link to="/contact">  Schedule Consultation </Link>
               </button>
               <button className="px-8 py-4 border border-white/20  hover:bg-white/10 transition-colors">
-                View Portfolio
+              <Link to="/projects">  View Portfolio </Link>
               </button>
             </div>
           </div>

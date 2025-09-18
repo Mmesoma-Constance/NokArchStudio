@@ -36,7 +36,7 @@ const Navigation = () => {
               >
                 <Link 
                   to={item.href} 
-                  className={`nav-link ${
+                  className={`nav-link font-montserrat ${
                     location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                   }`}
                 >
@@ -61,7 +61,7 @@ const Navigation = () => {
                       <Link 
                         to="/about#studio" 
                         className={`block px-4 py-2 nav-link hover:bg-muted ${
-                          location.hash === '#studio' ? 'text-blue-600 font-medium' : ''
+                          location.hash === '#studio' ? 'text-[#1f5c89] font-medium' : ''
                         }`}
                       >
                         Our Studio
@@ -69,7 +69,7 @@ const Navigation = () => {
                       <Link 
                         to="/about#team" 
                         className={`block px-4 py-2 nav-link hover:bg-muted ${
-                          location.hash === '#team' ? 'text-blue-600 font-medium' : ''
+                          location.hash === '#team' ? 'text-[#1f5c89] font-medium' : ''
                         }`}
                       >
                         Team
@@ -77,7 +77,7 @@ const Navigation = () => {
                       <Link 
                         to="/about#philosophy" 
                         className={`block px-4 py-2 nav-link hover:bg-muted ${
-                          location.hash === '#philosophy' ? 'text-blue-600 font-medium' : ''
+                          location.hash === '#philosophy' ? 'text-[#1f5c89] font-medium' : ''
                         }`}
                       >
                         Philosophy
@@ -118,7 +118,7 @@ const Navigation = () => {
                   <Link 
                     to={item.href} 
                     className={`block nav-link text-lg py-2 ${
-                      location.pathname === item.href ? 'text-blue-600 font-medium' : 'text-gray-800'
+                      location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -129,7 +129,7 @@ const Navigation = () => {
                       <Link 
                         to="/about#studio" 
                         className={`block nav-link text-sm py-1 ${
-                          location.hash === '#studio' ? 'text-blue-600 font-medium' : 'opacity-80'
+                          location.hash === '#studio' ? 'text-[#1f5c89] font-medium' : 'opacity-80'
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -138,7 +138,7 @@ const Navigation = () => {
                       <Link 
                         to="/about#team" 
                         className={`block nav-link text-sm py-1 ${
-                          location.hash === '#team' ? 'text-blue-600 font-medium' : 'opacity-80'
+                          location.hash === '#team' ? 'text-[#1f5c89] font-medium' : 'opacity-80'
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -147,7 +147,7 @@ const Navigation = () => {
                       <Link 
                         to="/about#philosophy" 
                         className={`block nav-link text-sm py-1 ${
-                          location.hash === '#philosophy' ? 'text-blue-600 font-medium' : 'opacity-80'
+                          location.hash === '#philosophy' ? 'text-[#1f5c89] font-medium' : 'opacity-80'
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >

@@ -9,6 +9,7 @@ export default {
         raleway: ["Raleway", "sans-serif"],
         lora: ["Lora", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        inconsolata: ["Inconsolata", "monospace"],
       },
     },
   },

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import project1 from "./../assets/images/project (1).jpg";
 import project2 from "./../assets/images/project (2).jpg";
@@ -17,15 +18,15 @@ const projects = [
     description:
       "A contemporary office building featuring clean lines and sustainable design principles.",
     image: project1,
-    slug: "modern-corporate-complex",
+    slug: "modern-lagos-villa", 
   },
   {
     id: 2,
     title: "Residential Innovation",
     description:
-      "We are NokArchStudio - an internationally engaged architectural design studio, rooted in Lagos",
+      "We are NokArchStudio - an internationally engaged architectural design studio, rooted in Awka",
     image: project2,
-    slug: "residential-innovation",
+      slug: "tech-hub-complex",
   },
   {
     id: 3,
@@ -33,7 +34,7 @@ const projects = [
     description:
       "Integrating commercial and residential spaces in the heart of the city.",
     image: project3,
-    slug: "urban-mixed-use",
+    slug: "university-library",
   },
   {
     id: 4,
@@ -41,7 +42,7 @@ const projects = [
     description:
       "A space that celebrates local heritage while embracing contemporary design.",
     image: project4,
-    slug: "cultural-center",
+    slug: "family-residence",
   },
   {
     id: 5,
@@ -49,15 +50,15 @@ const projects = [
     description:
       "Eco-friendly residential design that prioritizes environmental responsibility.",
     image: project5,
-    slug: "sustainable-housing",
+    slug: "heritage-restoration",
   },
   {
     id: 6,
     title: "Lagos Innovation Hub",
     description:
-      "We are NokArchStudio - an internationally engaged architectural design studio, rooted in Lagos",
+      "We are NokArchStudio - an internationally engaged architectural design studio, rooted in Awka",
     image: project6,
-    slug: "lagos-innovation-hub",
+   slug: "retail-complex", 
   },
   {
     id: 7,
@@ -65,7 +66,7 @@ const projects = [
     description:
       "A striking structure that harmonizes with its coastal environment.",
     image: project7,
-    slug: "waterfront-pavilion",
+      slug: "beachfront-resort",
   },
   {
     id: 8,
@@ -73,7 +74,7 @@ const projects = [
     description:
       "Inspiring learning spaces designed for the future of education.",
     image: project8,
-    slug: "educational-campus",
+    slug: "university-library",
   },
   {
     id: 9,
@@ -81,7 +82,7 @@ const projects = [
     description:
       "A gathering place that strengthens social connections and community bonds.",
     image: project9,
-    slug: "community-center",
+   slug: "university-library",
   },
 ];
 
@@ -90,6 +91,7 @@ const HeroCarousel = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [nextImage, setNextImage] = useState(null);
+
 
   // Preload next image for smooth transitions
   useEffect(() => {
@@ -151,9 +153,12 @@ const HeroCarousel = () => {
     }, 350);
   };
 
+
+  const navigate = useNavigate()
+
   const handleViewProject = () => {
     // Navigate to project page
-    window.location.href = `/projects/${projects[currentSlide].slug}`;
+    navigate(`/projects/${projects[currentSlide].slug}`);
   };
 
   const currentProject = projects[currentSlide];
@@ -162,14 +167,16 @@ const HeroCarousel = () => {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
+      <div className="relative w-full">
         <img
           src={currentProject.image}
           alt={currentProject.title}
-          className={`hero-image ${
+          className={`hero-image w-full object-cover aspect-video  ${
             isTransitioning ? "hero-image-exit-active" : ""
           }`}
         />
-        <div className="absolute inset-0 bg-black/20 " />
+        </div>
+        <div className="absolute inset-0 bg-black/25 " />
       </div>
 
       {/* Content Overlay */}

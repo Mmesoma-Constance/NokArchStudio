@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from "react-router-dom"
 import Navigation from './../components/Navbar';
 import Footer from './../components/Footer';
 import { Users, Lightbulb, Award, Leaf, ZoomIn, UserCheck } from 'lucide-react';
@@ -8,6 +10,20 @@ import team3 from "./../assets/images/team (3).jpg";
 import team4 from "./../assets/images/team (4).jpg";
 
 const About = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if(location.hash) {
+      const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({behavior: "smooth"})
+        }
+      
+    } else {
+      window.scrollTo({top: 0})
+    }
+  
+  }, [location])
+  
   const teamMembers = [
     {
       name: "NokArchStudio",
@@ -40,32 +56,32 @@ const About = () => {
     {
       title: "Innovative Design",
       icon: Lightbulb,
-      description: "Over 15 years of experience in sustainable architecture and urban planning."
+      description: "We create modern, functional, and aesthetic spaces tailored to your lifestyle and vision."
     },
     {
       title: "Client-Centered Approach", 
       icon: UserCheck,
-     description: "Specializes in residential and commercial interior design with a modern aesthetic."
+     description: "Your needs and preferences are at heart of every design decision we make."
     },
     {
       title: "Sustainable Solutions",
       icon: Leaf,
-       description: "Ensures seamless project execution from concept to completion."
+       description: "We intergrate eco-friendly practices and materials to build for today and the future."
     },
     {
       title: "Attention to Detail",
       icon: ZoomIn,
-      description: "Creates harmonious outdoor spaces that complement architectural designs."
+      description: "From concept to completion, we ensure accuracy, quality, and seamless  project delivery."
     },
- {
+   {
       title: "Expert Team",
       icon: Users,
-       description: "Ensures seamless project execution from concept to completion."
+       description: "Our team brings diverse skills and years of experience, ensuring creative solutions and professional execution."
     },
     {
       title: "Proven Track Record",
       icon: Award,
-      description: "Creates harmonious outdoor spaces that complement architectural designs."
+      description: "Our portfolio showcases successful residential, commercial, and luxury projects that speak for themselves."
     }
   ];
 
@@ -79,7 +95,7 @@ const About = () => {
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="text-center space-y-8">
              
-              <p className="text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
+              <p className="font-inconsolata uppercase text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 We are a creative architectural studio dedicated to crafting spaces that inspire, 
                 function beautifully, and stand the test of time.
               </p>
@@ -88,14 +104,14 @@ const About = () => {
         </section>
 
         {/* Our Studio Section */}
-        <section id="studio" className="max-w-8xl mx-auto px-6 w-full py-20">
+        <section id="studio" className="max-w-8xl mx-auto px-6 w-full pb-20">
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl md:text-5xl font-light text-foreground mb-8">
                   Our Studio
                 </h2>
-                <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <div className="space-y-6 text-muted-foreground leading-relaxed font-inconsolata">
                   <p>
                     Founded in 2010, NokArchStudio Studio has emerged as a leading architectural practice 
                     in Nigeria, with projects spanning residential, commercial, and institutional spaces.
@@ -122,25 +138,25 @@ const About = () => {
         </section>
 
         {/* What We Do Section */}
-        <section className="py-20 bg-gray-50">
+        <section  className="py-20 bg-gray-50">
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-light text-foreground mb-6">
                 Why Choose Us?
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Our expertise spans multiple disciplines, ensuring comprehensive architectural solutions.
+              <p className="font-inconsolata text-xl font-light text-muted-foreground max-w-2xl mx-auto">
+               Here's what makes NokArchStudio the trusted partner for your architectural journey.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div data-aos="fade-in" className=" grid grid-cols-1 md:grid-cols-3 gap-12 font-inconsolata">
               {items.map((item, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-8 h-8" />
+                  <item.icon className="w-8 h-8 text-[#1f5c89]" />
                   </div>
-                  <h3 className="text-xl font-medium text-foreground mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-xl font-medium text-foreground mb-4 text-[#1f5c89]">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed ">
                  {item.description}
                 </p>
                 </div>
@@ -152,18 +168,18 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section id="team" className=" max-w-8xl mx-auto px-6 w-full py-20">
+        <section  data-aos="fade-up" id="team" className=" max-w-8xl mx-auto px-6 w-full py-20">
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-light text-foreground mb-6">
                 Our Team
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="font-inconsolata text-xl text-muted-foreground max-w-2xl mx-auto">
                 Meet the creative minds behind our exceptional architectural projects.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-inconsolata">
               {teamMembers.map((member, index) => (
                 <div key={index} className="group">
                   <div className="aspect-[4/4] bg-muted rounded-lg overflow-hidden mb-6">
@@ -173,8 +189,8 @@ const About = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">{member.name}</h3>
-                  <p className="text-primary mb-3">{member.role}</p>
+                  <h3 className="text-lg font-medium text-foreground mb-2 ">{member.name}</h3>
+                  <p className="text-primary mb-3 text-[#1f5c89]">{member.role}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {member.description}
                   </p>
@@ -190,7 +206,7 @@ const About = () => {
             <h2 className="text-3xl md:text-5xl font-light text-foreground mb-12">
               Our Philosophy
             </h2>
-            <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+            <div data-aos="zoom-in" className="space-y-8 text-lg text-muted-foreground leading-relaxed font-inconsolata">
               <p>
                 "Architecture is not just about creating buildings; it's about crafting experiences 
                 that enrich human lives and strengthen communities."

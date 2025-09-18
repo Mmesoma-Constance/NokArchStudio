@@ -69,9 +69,17 @@ const allProjects = [
     client: "University of Ibadan",
     description: "A modern library building that serves as a beacon of knowledge and learning.",
     images: [
+      project1,
+      project3,
+      project5,
       project4,
-      project9,
-      project2
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
   {
@@ -85,12 +93,17 @@ const allProjects = [
     client: "Retail Group Ltd",
     description: "A vibrant shopping complex that integrates retail, dining, and entertainment spaces.",
     images: [
-      project6,
-      project7, 
-      project8,
-      project9,
       project1,
-      project3
+      project3,
+      project5,
+      project4,
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
   {
@@ -104,12 +117,17 @@ const allProjects = [
     client: "Lagos State Government",
     description: "Careful restoration of a colonial-era building preserving its historical significance.",
     images: [
-      project6,
-      project7, 
-      project8,
-      project9,
       project1,
-      project3
+      project3,
+      project5,
+      project4,
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
   {
@@ -123,12 +141,17 @@ const allProjects = [
     client: "Private Family",
     description: "A sustainable family home that responds to the local climate and culture.",
     images: [
-     project6,
-      project7, 
+     project1,
+      project3,
+      project5,
+      project4,
+      project6,
       project8,
-      project9,
-      project1,
-      project3
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
   {
@@ -142,12 +165,17 @@ const allProjects = [
     client: "Private Family",
     description: "A sustainable family home that responds to the local climate and culture.",
     images: [
-     project6,
-      project7, 
+     project1,
+      project3,
+      project5,
+      project4,
+      project6,
       project8,
-      project9,
-      project1,
-      project3
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
   {
@@ -161,9 +189,17 @@ const allProjects = [
     client: "University of Ibadan",
     description: "A modern library building that serves as a beacon of knowledge and learning.",
     images: [
+     project1,
+      project3,
+      project5,
       project4,
-      project9,
-      project2
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
   {
@@ -177,12 +213,82 @@ const allProjects = [
     client: "Retail Group Ltd",
     description: "A vibrant shopping complex that integrates retail, dining, and entertainment spaces.",
     images: [
-      project6,
-      project7, 
-      project8,
-      project9,
       project1,
-      project3
+      project3,
+      project5,
+      project4,
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
+    ]
+  },
+    {
+    id: 10,
+    title: "Tech Hub Complex",
+    slug: "tech-hub-complex",
+    category: "commercial", 
+    image: project2,
+    location: "Abuja, Nigeria", 
+    year: "2023",
+    client: "TechCorp Nigeria",
+    description: "A cutting-edge office complex designed for Nigeria's growing tech industry.",
+    images: [
+      project6,
+      project2,
+      project5,
+      project7
+    ]
+  },
+  {
+    id: 11,
+    title: "Heritage Restoration",
+    slug: "heritage-restoration",
+    category: "heritage",
+    image: project6,
+    location: "Lagos Island, Nigeria", 
+    year: "2022",
+    client: "Lagos State Government",
+    description: "Careful restoration of a colonial-era building preserving its historical significance.",
+    images: [
+      project1,
+      project3,
+      project5,
+      project4,
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
+    ]
+  },
+  {
+    id: 12,
+    title: "Retail Complex",
+    slug: "retail-complex", 
+    category: "commercial",
+    image: project4,
+    location: "Port Harcourt, Nigeria",
+    year: "2022", 
+    client: "Retail Group Ltd",
+    description: "A vibrant shopping complex that integrates retail, dining, and entertainment spaces.",
+    images: [
+      project1,
+      project3,
+      project5,
+      project4,
+      project6,
+      project8,
+      project2,
+      project7, 
+      project10,
+      project9, 
+      project8
     ]
   },
 ];
@@ -221,7 +327,7 @@ const Projects = () => {
           <main className="pt-20">
             <div className="max-w-8xl mx-auto px-6 lg:px-12 py-12 text-center">
               <h1 className="text-4xl font-light text-foreground mb-4">Project Not Found</h1>
-              <Link to="/projects" className="text-primary hover:underline">
+              <Link to="/projects" className="text-primary hover:underline hover:text-[#1f5c89]">
                 Back to Projects
               </Link>
             </div>
@@ -235,42 +341,42 @@ const Projects = () => {
         <Navigation />
         <main className="pt-20">
           {/* Project Header */}
-          <section className="py-12 bg-muted/30">
+          <section className="font-inconsolata py-12 bg-muted/30">
             <div className="max-w-8xl mx-auto px-6 lg:px-12">
               <Link 
                 to="/projects" 
-                className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors"
+                className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors hover:text-[#1f5c89]"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
+                <ArrowLeft className="w-4 h-4 mr-2 text-" />
                 Back to Projects
               </Link>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6">
                     {project.title}
                   </h1>
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  <p  className="text-lg text-muted-foreground mb-8 leading-relaxed">
                     {project.description}
                   </p>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div data-aos="slide-right"  className="grid grid-cols-1  gap-6">
                     <div className="flex items-center space-x-3">
-                      <Calendar className="w-5 h-5 text-primary flex-shrink-0" />
+                      <Calendar className="w-5 h-5 text-primary flex-shrink-0 text-[#1f5c89]" />
                       <div>
                         <p className="text-sm text-muted-foreground">Year</p>
                         <p className="font-medium">{project.year}</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0 text-[#1f5c89]" />
                       <div>
                         <p className="text-sm text-muted-foreground">Location</p>
                         <p className="font-medium">{project.location}</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Users className="w-5 h-5 text-primary flex-shrink-0" />
+                      <Users className="w-5 h-5 text-primary flex-shrink-0 text-[#1f5c89]" />
                       <div>
                         <p className="text-sm text-muted-foreground">Client</p>
                         <p className="font-medium">{project.client}</p>
@@ -298,17 +404,17 @@ const Projects = () => {
     </h2>
 
     {/* Masonry Grid */}
-    <div className="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
+    <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
       {project.images.map((image, index) => (
         <div
           key={index}
-          className="break-inside-avoid rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+        data-aos="fade-in"   data-aos-duration="300"  className="break-inside-avoid rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
           onClick={() => setLightboxIndex(index)}
         >
           <img
             src={image}
             alt={`${project.title} - Image ${index + 1}`}
-            className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+           className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
       ))}
@@ -378,7 +484,7 @@ const visibleProjects = filteredProjects.slice(0, visibleCount);
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="text-center space-y-8">
              
-              <p className="text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
+              <p className="font-inconsolata uppercase text-xl text-hero-accent max-w-3xl mx-auto leading-relaxed">
                 Explore our portfolio of innovative architectural projects that showcase 
                 our commitment to design excellence and sustainable building practices.
               </p>
@@ -387,7 +493,7 @@ const visibleProjects = filteredProjects.slice(0, visibleCount);
         </section>
 
         {/* Category Tabs */}
-        <section className=" bg-muted/30">
+        <section className="font-inconsolata bg-muted/30">
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category) => (
@@ -408,12 +514,12 @@ const visibleProjects = filteredProjects.slice(0, visibleCount);
         </section>
 
         {/* Projects Grid */}
-        <section className="py-20">
+        <section className="font-inconsolata py-20">
           <div className="max-w-8xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {visibleProjects.map((project) => (
     <Link key={project.id} to={`/projects/${project.slug}`} className="group">
-      <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden mb-6">
+      <div  data-aos="fade-in" className="aspect-[4/3] bg-muted rounded-lg overflow-hidden mb-6">
         <img 
           src={project.image}
           alt={project.title}
@@ -424,7 +530,7 @@ const visibleProjects = filteredProjects.slice(0, visibleCount);
         <h3 className="text-xl font-medium text-foreground group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-muted-foreground capitalize">
+        <p className="text-muted-foreground capitalize text-[#1f5c89]">
           {project.category} • {project.location}
         </p>
         <p className="text-sm text-muted-foreground line-clamp-2">
