@@ -117,7 +117,7 @@ const Navigation = () => {
                 <div key={item.label}>
                   <Link 
                     to={item.href} 
-                    className={`block nav-link text-lg py-2 ${
+                    className={`block font-montserrat nav-link text-lg py-2 ${
                       location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -125,7 +125,7 @@ const Navigation = () => {
                     {item.label}
                   </Link>
                   {item.hasDropdown && (
-                    <div className="ml-4 mt-2 space-y-2">
+                    <div className="font-montserrat ml-4 mt-2 space-y-2">
                       <Link 
                         to="/about#studio" 
                         className={`block nav-link text-sm py-1 ${

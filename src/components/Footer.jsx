@@ -58,15 +58,15 @@ const Footer = () => {
             © {currentYear} NokArchStudio. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
+            <Link to="/faq" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
              FAQ
-            </a>
-          <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
+            </Link>
+          <Link to="/privacy-policy" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
               Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
+            </Link>
+            <Link to="/terms-of-service" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
