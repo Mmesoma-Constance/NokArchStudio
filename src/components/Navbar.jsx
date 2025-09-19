@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex font-montserrat items-center space-x-8">
+          <div className="hidden md:flex font-inconsolata items-center space-x-8">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -36,7 +36,7 @@ const Navbar = () => {
               >
                 <Link 
                   to={item.href} 
-                  className={`nav-link font-montserrat ${
+                  className={`nav-link font-inconsolata text-[16px] ${
                     location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                   }`}
                 >
@@ -56,7 +56,7 @@ const Navbar = () => {
 
                 {/* Dropdown Menu for About Us */}
                 {item.hasDropdown && activeMenu === item.label && (
-                  <div className="font-montserrat absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm shadow-lg border border-border z-50">
+                  <div className="font-inconsolata absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm shadow-lg border border-border z-50">
                     <div className="py-2">
                       <Link 
                         to="/about#studio" 
@@ -90,7 +90,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden font-montserrat">
+          <div className="md:hidden font-inconsolata">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="nav-link p-2"
@@ -106,18 +106,18 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Panel */}
-        <div className={`md:hidden font-montserrat transition-all duration-300 ease-out ${
+        <div className={`md:hidden font-inconsolata transition-all duration-300 ease-out ${
           isMobileMenuOpen 
             ? 'max-h-96 opacity-100' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="font-montserrat bg-background/95 backdrop-blur-sm border-t border-border">
+          <div className="font-inconsolata bg-background/95 backdrop-blur-sm border-t border-border">
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
                 <div key={item.label}>
                   <Link 
                     to={item.href} 
-                    className={`block nav-link font-montserrat text-lg py-2 ${
+                    className={`block nav-link font-inconsolata text-lg py-2 ${
                       location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -125,7 +125,7 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                   {item.hasDropdown && (
-                    <div className="font-montserrat ml-4 mt-2 space-y-2">
+                    <div className="font-inconsolata ml-4 mt-2 space-y-2">
                       <Link 
                         to="/about#studio" 
                         className={`block nav-link text-sm py-1 ${
