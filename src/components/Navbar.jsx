@@ -117,7 +117,7 @@ const Navigation = () => {
                 <div key={item.label}>
                   <Link 
                     to={item.href} 
-                    className={`block font-montserrat nav-link text-lg py-2 ${
+                    className={`block nav-link font-montserrat text-lg py-2 ${
                       location.pathname === item.href ? 'text-[#1f5c89] font-medium' : 'text-gray-800'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
