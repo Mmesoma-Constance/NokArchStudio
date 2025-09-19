@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, Menu } from 'lucide-react';
 
-const Navigation = () => {
+const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -26,7 +26,7 @@ const Navigation = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex font-montserrat items-center space-x-8">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -165,4 +165,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navbar;
