@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-muted/30 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
@@ -44,6 +45,7 @@ const Footer = () => {
               <p>+234 (0) 123 456 789</p>
               <p>hello@nokarchstudio.com</p>
               <ul className="flex gap-3">
+                <i className="fa-brands fa-tiktok w-2 h-2 hover:text-[#1f5c89] cursor-pointer opacity-80 pr-3"></i>
                 <Link>  <Instagram className=" w-4 h-4 hover:text-[#1f5c89]" /> </Link>
                 <Link><Linkedin className=" w-4 h-4 hover:text-[#1f5c89]" /></Link>
                 </ul>
@@ -53,16 +55,16 @@ const Footer = () => {
 
         <div className="font-inconsolata border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2025 NokArchStudio. All rights reserved.
+            © {currentYear} NokArchStudio. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-sm">
+            <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
              FAQ
             </a>
-          <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-sm">
+          <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-sm">
+            <a href="#" className="text-muted-foreground hover:text-[#1f5c89] transition-colors text-xs sm:text-sm">
               Terms of Service
             </a>
           </div>

@@ -167,15 +167,15 @@ const HeroCarousel = () => {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-      <div className="relative w-full">
+     
         <img
           src={currentProject.image}
           alt={currentProject.title}
-          className={`hero-image w-full object-cover aspect-video  ${
+          className={`hero-image  ${
             isTransitioning ? "hero-image-exit-active" : ""
           }`}
         />
-        </div>
+       
         <div className="absolute inset-0 bg-black/25 " />
       </div>
 

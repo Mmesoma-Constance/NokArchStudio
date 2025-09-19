@@ -56,7 +56,7 @@ const Navigation = () => {
 
                 {/* Dropdown Menu for About Us */}
                 {item.hasDropdown && activeMenu === item.label && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm shadow-lg border border-border z-50">
+                  <div className="font-montserrat absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm shadow-lg border border-border z-50">
                     <div className="py-2">
                       <Link 
                         to="/about#studio" 
@@ -90,7 +90,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden font-montserrat">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="nav-link p-2"
@@ -111,7 +111,7 @@ const Navigation = () => {
             ? 'max-h-96 opacity-100' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="bg-background/95 backdrop-blur-sm border-t border-border">
+          <div className="font-montserrat bg-background/95 backdrop-blur-sm border-t border-border">
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
                 <div key={item.label}>
